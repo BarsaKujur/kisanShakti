@@ -1,4 +1,5 @@
 import React , { useState } from 'react'
+import LocationFetcher from './LocationFetcher';
 
 const CropAdvisorFrom = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,8 @@ const CropAdvisorFrom = () => {
     climateZone: '',
     lastCrop: '',
   });
+
+  const [locationMode, setLocationMode] = useState("manual");
 
   const [recommendations, setRecommendations] = useState([]);
 
@@ -79,13 +82,38 @@ const fetchSoilData = async (lat, lon) => {
     backdropFilter: 'brightness(0.95)',
     border: '1px solid #ccc'
   }} >
-        <div className="row g-3">
+        <div className="row g-2">
 
           {/* Basic Inputs */}
-          <div className="col-md-4">
-            <label>Location</label>
-            <input type="text" className="form-control" name="location" value={formData.location} onChange={handleChange} required />
-          </div>
+          {locationMode === "current" && (
+  <LocationFetcher setLocation={(loc) => setFormData((prev) => ({ ...prev, location: loc }))} />
+)}
+
+  <div className="col-md-4">
+    <label>Location Mode</label>
+    <select
+      className="form-control"
+      value={locationMode}
+      onChange={(e) => setLocationMode(e.target.value)}
+    >
+      <option value="manual">Manual</option>
+      <option value="current">Current</option>
+    </select>
+  </div>
+
+  <div className="col-md-4">
+    <label>Location</label>
+    <input
+      type="text"
+      className="form-control"
+      name="location"
+      value={formData.location}
+      onChange={locationMode === "manual" ? handleChange : () => {}}
+      required
+      readOnly={locationMode !== "manual"}
+    />
+  </div>
+
 
           <div className="col-md-4">
             <label>Irrigation Type</label>
