@@ -1,0 +1,20 @@
+.signup-page {
+  min-height: 100vh;
+  background: url('https://t4.ftcdn.net/jpg/11/25/96/23/360_F_1125962371_D8BU9ZpTBMTihboBGctD9Y6ChtWUNXy1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.custom-signin-btn {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-signin-btn:hover {
+  background-color: #218838;
+}
+

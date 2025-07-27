@@ -1,0 +1,33 @@
+.what-we-do-section h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+.what-we-do-section p {
+  font-size: 1.1rem;
+}
+
+/* Card image styling */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect on hover */
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Optional: subtle shadow on hover */
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card {
+  transition: transform 0.3s ease;
+}
+

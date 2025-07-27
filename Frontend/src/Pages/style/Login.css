@@ -1,0 +1,32 @@
+.login-page {
+  background-color: #121212;
+  color: white;
+}
+
+.login-btn {
+  background-color: #28a745;
+  border: none;
+  font-weight: bold;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+.login-btn:hover {
+  background-color: #218838;
+}
+
+.fern-bg {
+  background: url('/images/fern-leaves.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #28a745;
+}
+

@@ -1,0 +1,56 @@
+/* Step 1: Save Order Summary on Checkout
+In CartPage.jsx, update handleCheckout:
+
+jsx
+const handleCheckout = () => {
+  const order = {
+    items: cartItems,
+    total: totalPrice,
+    date: new Date().toLocaleDateString(),
+    status: 'Confirmed',
+  };
+
+  localStorage.setItem('orderSummary', JSON.stringify(order));
+  localStorage.removeItem('cart');
+  setCartItems([]);
+  navigate('/order-confirmation');
+};
+✅ Step 2: Show Delivery Summary in ProfilePage.jsx
+jsx
+import React from 'react';
+import { Container, Card } from 'react-bootstrap';
+
+const ProfilePage = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  const order = JSON.parse(localStorage.getItem('orderSummary'));
+
+  return (
+    <Container className="py-5">
+      <h2 className="text-success text-center mb-4">Welcome, {user?.name || 'User'}</h2>
+      <p className="text-center">Role: {user?.role}</p>
+
+      <hr />
+
+      <h4 className="text-success mb-3">Delivery Summary</h4>
+      {order ? (
+        <Card className="shadow-sm p-3">
+          <p><strong>Order Date:</strong> {order.date}</p>
+          <p><strong>Status:</strong> {order.status}</p>
+          <p><strong>Total:</strong> ₹{order.total}</p>
+          <p><strong>Items:</strong></p>
+          <ul>
+            {order.items.map((item, idx) => (
+              <li key={idx}>
+                {item.name} — {item.quantitySelected} kg @ ₹{item.price}/kg
+              </li>
+            ))}
+          </ul>
+        </Card>
+      ) : (
+        <p className="text-muted">No recent orders found.</p>
+      )}
+    </Container>
+  );
+};
+
+export default ProfilePage; */

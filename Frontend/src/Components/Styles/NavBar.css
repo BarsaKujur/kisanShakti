@@ -1,0 +1,40 @@
+/* src/components/Navbar/Navbar.css */
+.navbar-custom {
+  background-color: #2E7D32;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: #2E7D32 !important;
+}
+#bg{
+   /* background-color: #eef169;
+        background-image: radial-gradient(circle, #9F7E4A, #eef169, #9F7E4A 600%); */ 
+     
+
+   /* background: linear-gradient(to right, #F3E9D2, #D6CDA4, #A3B18A); */
+ /* background: linear-gradient(to right, #FFF8E1, #FDD9A0, #E6A57E); */
+ background: linear-gradient(to right, #A7C957);
+ /* background: linear-gradient(to right, #FFF3E0, #FFD8A9, #FFAB76); */
+ /* background: linear-gradient(to right, #FDEBD0, #FAD6A5, #F5B895); */
+/* background: linear-gradient(to right, #CDEAC0, #A2D2B2, #6FB1A0); */
+/* background: linear-gradient(to right, #FFF3E0, #FFD8A9, #FFB085); */
+/* background: linear-gradient(to right, #FDEBD0, #FAD6A5, #F5B895); */
+/* background: linear-gradient(to right, #FAF3DD, #F8CBA6, #E3A587); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        padding: 48px 24px;
+        color: #FFF;
+}

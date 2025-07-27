@@ -1,0 +1,24 @@
+.hero-wrapper {
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/051/266/736/small/a-green-wall-with-many-leaves-and-flowers-photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.hero-image {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.hero-wrapper .btn {
+  border-radius: 30px;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+}
+
+.hero-wrapper .btn:hover {
+  background-color: orangered;
+  color: #333;
+}

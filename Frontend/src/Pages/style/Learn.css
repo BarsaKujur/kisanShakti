@@ -1,0 +1,8 @@
+.category-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-strip::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
