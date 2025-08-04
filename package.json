@@ -1,11 +1,26 @@
 {
+  "name": "kisanshakti",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/BarsaKujur/kisanShakti#readme",
+  "bugs": {
+    "url": "https://github.com/BarsaKujur/kisanShakti/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarsaKujur/kisanShakti.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node App.jsx"
+  },
   "dependencies": {
     "react-dropzone": "^14.3.8",
     "react-icons": "^5.5.0"
   },
- "scripts": {
-  "dev": "node index.js",
-  "start": "node main.js"
-}
-
+  "devDependencies": {}
 }
