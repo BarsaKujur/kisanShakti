@@ -159,16 +159,19 @@
 }
 
 .custom-search-btn {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+ 
+  background: linear-gradient(135deg, #a8e063, #56ab2f); 
   color: white;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
-  /* transition: background 0.3s ease; */
+ 
 }
 
 .custom-search-btn:hover {
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  
+  background: linear-gradient(135deg, #56ab2f, #a8e063); 
+  transform: scale(1.05);
 }
 
 .suggestion-list {
@@ -176,3 +179,13 @@
   border-radius: 8px;
   overflow: hidden;
 }
+.location-text {
+  color: #255c14;
+  font-weight: 600;
+ font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+
+
