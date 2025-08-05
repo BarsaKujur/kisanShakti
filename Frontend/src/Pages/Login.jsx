@@ -66,7 +66,7 @@ function Login() {
       </div>
 
       <div className="fern-bg">
-        <button className="top-sign-in">SIGN IN</button>
+        <button className="top-sign-in">SIGN UP</button>
       </div>
     </div>
   );
