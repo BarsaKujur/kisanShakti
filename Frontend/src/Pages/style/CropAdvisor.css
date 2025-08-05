@@ -54,3 +54,27 @@
   font-size: 1.5rem;
   color: #2E7D32;
 }
+/* CropAdvisorTabs.css */
+.custom-tab-btn {
+   background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.custom-tab-btn:hover {
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.custom-tab-btn.active {
+  background: linear-gradient(to right, #50D5B7, #067D68);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
