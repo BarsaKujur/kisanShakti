@@ -33,7 +33,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/sell" style={{ color: '#255c14' }}>Sell</Nav.Link>
             <Nav.Link as={Link} to="/cropadvisor" style={{ color: '#255c14' }}>CropAdvisor</Nav.Link>
             <Nav.Link as={Link} to="/weather" style={{ color: '#255c14' }}>Weather</Nav.Link>
-            <Nav.Link as={Link} to="/learn" style={{ color: '#255c14' }}>LiveMarkpetPrice</Nav.Link>
+            <Nav.Link as={Link} to="/livemarketprice" style={{ color: '#255c14' }}>LiveMarkpetPrice</Nav.Link>
             <Nav.Link as={Link} to="/learn" style={{ color: '#255c14' }}>Learn</Nav.Link>
 
             {/* Language Toggle */}
