@@ -3,7 +3,7 @@ import Banner from '../Components/Banner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './style/Weather.css';
-import WeatherCard from '../Components/weathercard'; 
+import WeatherCard from '../Components/weathercard'; // Make sure this path is correct
 
 
 const mockForecast = Array.from({ length: 30 }, (_, i) => {
@@ -16,22 +16,32 @@ const mockForecast = Array.from({ length: 30 }, (_, i) => {
   return { day, date, temperature, condition };
 });
 
+const mockSuggestions = ['Rourkela', 'Bhubaneswar', 'Cuttack', 'Sambalpur', 'Balasore'];
+
 const Weather = () => {
   const [location, setLocation] = useState('Rourkela');
   const [forecast, setForecast] = useState([]);
+   const [inputValue, setInputValue] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
     AOS.init({ duration: 800 });
     handleSearch();
   }, []);
 
-  const handleSearch = async () => {
-    try {
-      const data = mockForecast;
-      setForecast(data);
-    } catch (error) {
-      console.error('Error fetching weather:', error);
-    }
+  const handleSearch = (loc) => {
+    setLocation(loc || inputValue || 'Rourkela');
+    setForecast(mockForecast);
+    setSuggestions([]);
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+    const filtered = mockSuggestions.filter((s) =>
+      s.toLowerCase().includes(value.toLowerCase())
+    );
+    setSuggestions(filtered);
   };
 
   const getAlertAndTip = (condition, temp) => {
@@ -132,9 +142,47 @@ const Weather = () => {
         description="Stay informed with hyperlocal forecasts and timely alerts. Plan your sowing, irrigation, and harvest with confidence—rain or shine."
         imageUrl="images/image11.jpg"
       />
-      <div className="container my-5">
+    
+
         <h2 className="text-center mb-4" data-aos="fade-down">🌾 30-Day Weather Forecast</h2>
-        
+        <div className="container my-5">
+        {/* Top Bar: Search + Location */}
+        <div className="d-flex justify-content-between align-items-start mb-4 flex-wrap">
+          <div className="weather-search-bar">
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control custom-input"
+                placeholder="Enter location"
+                value={inputValue}
+                onChange={handleInputChange}
+              />
+              <button className="btn custom-search-btn" onClick={() => handleSearch()}>
+                🔍 Search
+              </button>
+            </div>
+            {suggestions.length > 0 && (
+              <ul className="list-group position-absolute w-100 mt-1 suggestion-list">
+                {suggestions.map((s, index) => (
+                  <li
+                    key={index}
+                    className="list-group-item list-group-item-action"
+                    onClick={() => {
+                      setInputValue(s);
+                      handleSearch(s);
+                    }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <div className="text-end mt-2 mt-md-0">
+            <h5>📍 Forecast for: <span className="text-primary">{location}</span></h5>
+          </div>
+        </div>
       
 
         <div className="row" data-aos="fade-up">
@@ -150,6 +198,9 @@ const Weather = () => {
 };
 
 export default Weather;
+
+
+
 
 
 
