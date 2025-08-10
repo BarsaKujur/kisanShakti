@@ -1,38 +1,80 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Banner from '../Components/Banner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './style/Weather.css';
-import WeatherCard from '../Components/weathercard'; // Make sure this path is correct
+import WeatherCard from '../Components/weathercard';
 
-
-const mockForecast = Array.from({ length: 30 }, (_, i) => {
-  const dateObj = new Date(Date.now() + i * 86400000);
-  const day = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
-  const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const temperature = 25 + Math.floor(Math.random() * 10);
-  const condition = ['Sunny', 'Cloudy', 'Rainy', 'Stormy'][Math.floor(Math.random() * 4)];
-
-  return { day, date, temperature, condition };
-});
+const API_KEY = '4abcee7fe25fe64f912393582072f5c4'; 
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
 const mockSuggestions = ['Rourkela', 'Bhubaneswar', 'Cuttack', 'Sambalpur', 'Balasore'];
 
 const Weather = () => {
   const [location, setLocation] = useState('Rourkela');
   const [forecast, setForecast] = useState([]);
-   const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     AOS.init({ duration: 800 });
     handleSearch();
   }, []);
 
-  const handleSearch = (loc) => {
-    setLocation(loc || inputValue || 'Rourkela');
-    setForecast(mockForecast);
-    setSuggestions([]);
+  const handleSearch = async (loc) => {
+    const searchLocation = (loc || inputValue || 'Rourkela').trim();
+    setLocation(searchLocation);
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await axios.get(BASE_URL, {
+        params: {
+          q: searchLocation,
+          units: 'metric',
+          appid: API_KEY
+        }
+      });
+
+      const rawData = response.data.list;
+      if (!rawData || rawData.length === 0) {
+        throw new Error('No forecast data returned from API');
+      }
+
+      const dailyData = rawData.filter((_, index) => index % 8 === 0).slice(0, 7);
+
+      const formattedForecast = dailyData.map((entry) => {
+        const dateObj = new Date(entry.dt * 1000);
+        const day = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+        const date = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const temperature = Math.round(entry.main.temp);
+        const condition = normalizeCondition(entry.weather[0].main);
+
+        return { day, date, temperature, condition };
+      });
+
+      setForecast(formattedForecast);
+      setSuggestions([]);
+    } catch (error) {
+      console.error('Error fetching weather data:', error.response?.data || error.message);
+      setForecast([]);
+      setError('Could not fetch forecast. Please check the location or try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const normalizeCondition = (condition) => {
+    switch (condition) {
+      case 'Clear': return 'Sunny';
+      case 'Clouds': return 'Cloudy';
+      case 'Rain': return 'Rainy';
+      case 'Thunderstorm': return 'Stormy';
+      default: return condition;
+    }
   };
 
   const handleInputChange = (e) => {
@@ -132,9 +174,6 @@ const Weather = () => {
     };
   };
 
-   
-
-
   return (
     <div>
       <Banner
@@ -142,11 +181,9 @@ const Weather = () => {
         description="Stay informed with hyperlocal forecasts and timely alerts. Plan your sowing, irrigation, and harvest with confidence—rain or shine."
         imageUrl="images/image11.jpg"
       />
-    
 
-        <h2 className="text-center mb-4" data-aos="fade-down">🌾 30-Day Weather Forecast</h2>
-        <div className="container my-5">
-        {/* Top Bar: Search + Location */}
+      <h2 className="text-center mb-4" data-aos="fade-down">🌾 7-Day Weather Forecast</h2>
+      <div className="container my-5">
         <div className="d-flex justify-content-between align-items-start mb-4 flex-wrap">
           <div className="weather-search-bar">
             <div className="input-group">
@@ -183,14 +220,21 @@ const Weather = () => {
             <h5>📍 Forecast for: <span className="text-primary">{location}</span></h5>
           </div>
         </div>
-      
+
+        {error && <p className="text-danger">{error}</p>}
 
         <div className="row" data-aos="fade-up">
-          {forecast.map((day, index) => (
-            <div className="col-md-4 mb-4" key={index}>
-              <WeatherCard {...getCardProps(day)} />
-            </div>
-          ))}
+          {loading ? (
+            <p>Loading forecast...</p>
+          ) : forecast.length === 0 ? (
+            <p>No forecast data available.</p>
+          ) : (
+            forecast.map((day, index) => (
+              <div className="col-md-4 mb-4" key={index}>
+                <WeatherCard {...getCardProps(day)} />
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
@@ -198,9 +242,3 @@ const Weather = () => {
 };
 
 export default Weather;
-
-
-
-
-
-

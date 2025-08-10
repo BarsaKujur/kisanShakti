@@ -1,3 +1,4 @@
+/* Weather Card Container */
 .weather-card {
   background-size: cover;
   background-position: center;
@@ -7,32 +8,43 @@
   border-radius: 30px;
   padding: 1.5rem;
   transition: transform 0.3s ease;
-  max-width: 130px;
-  margin: auto;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.weather-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
+/* Hover Effect */
 .weather-card:hover {
   transform: scale(1.03);
 }
 
+/* Main Layout */
+.weather-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Image Container */
 .weather-image-container {
   text-align: center;
   margin-bottom: 1rem;
+  flex: 1 1 100%;
+  min-width: 120px;
 }
 
+/* Weather Image */
 .weather-image {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  /* transition: transform 0.3s ease;
-  flex-shrink: 0; */
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .weather-image:hover {
@@ -43,9 +55,12 @@
 .weather-info {
   text-align: left;
   flex-grow: 1;
+  flex: 1 1 100%;
+  min-width: 120px;
 }
+
 .weather-info h5 {
-  font-size: 1.68rem;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: 650;
 }
@@ -72,13 +87,6 @@
   padding: 0.75rem 1rem;
   font-size: 0.75rem;
 }
-
-
-
-
-
-
-
 
 /* Gradient Themes */
 .sunny-gradient {
@@ -115,7 +123,7 @@
 
 @keyframes rainDrop {
   0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(10px); opacity: 0.5; }
+  100% { transform: translateY(20px); opacity: 0.5; }
 }
 
 .weather-image.floating-cloud {
@@ -136,8 +144,7 @@
   50% { filter: brightness(1.5); }
 }
 
-
-
+/* Search Bar */
 .weather-search-bar {
   position: relative;
   width: 100%;
@@ -159,17 +166,14 @@
 }
 
 .custom-search-btn {
- 
   background: linear-gradient(135deg, #a8e063, #56ab2f); 
   color: white;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
- 
 }
 
 .custom-search-btn:hover {
-  
   background: linear-gradient(135deg, #56ab2f, #a8e063); 
   transform: scale(1.05);
 }
@@ -179,13 +183,39 @@
   border-radius: 8px;
   overflow: hidden;
 }
+
 .location-text {
   color: #255c14;
   font-weight: 600;
- font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
   font-size: 18px;
   letter-spacing: 0.5px;
 }
 
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .weather-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
 
+  .weather-image {
+    width: 100px;
+    height: 100px;
+  }
 
+  .weather-info h5 {
+    font-size: 1rem;
+  }
+
+  .weather-info p {
+    font-size: 0.9rem;
+  }
+
+  .alert-box,
+  .tip-box {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+}
+ 
