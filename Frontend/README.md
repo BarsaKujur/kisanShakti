@@ -12,13 +12,13 @@ SOLUTION:-
 "It’s not just a website. It’s a digital ally for every farmer—whether they own 2 acres or 20, whether they’re online or offline."
 
 Key Features:
-Direct Marketplace for farmer-to-consumer sales
-AI Chatbot Support in regional languages
-Smart Crop Advisory
-Pest Detection via Image Upload
-Fertilizer Recommendation Engine
-Subsidy & Scheme Finder
-Dynamic Crop Calendar & Planner
-Live Market Price Prediction
-Learning Hub
+Direct Marketplace for farmer-to-consumer sales,
+AI Chatbot Support in regional languages,
+Smart Crop Advisory,
+Pest Detection via Image Upload,
+Fertilizer Recommendation Engine,
+Subsidy & Scheme Finder,
+Dynamic Crop Calendar & Planner,
+Live Market Price Prediction,
+Learning Hub,
 Offline Access via Code-Based System for non-internet users
