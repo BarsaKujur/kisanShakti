@@ -8,7 +8,7 @@ This isn’t an isolated case—it’s the daily reality for millions.
 
 SOLUTION:-
 
-"We’re building KrishiMitra—a unified, AI-powered agricultural platform that transforms farming from guesswork to precision, and isolation to empowerment."
+"We’re building KishanSakhi—a unified, AI-powered agricultural platform that transforms farming from guesswork to precision, and isolation to empowerment."
 "It’s not just a website. It’s a digital ally for every farmer—whether they own 2 acres or 20, whether they’re online or offline."
 
 Key Features:
