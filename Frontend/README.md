@@ -13,6 +13,7 @@ SOLUTION:-
 
 Key Features:
 Direct Marketplace for farmer-to-consumer sales
+
 AI Chatbot Support in regional languages
 Smart Crop Advisory
 Pest Detection via Image Upload
