@@ -1,0 +1,336 @@
+.scheme-finder {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url('/images/image13.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.scheme-finder h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+/* 🔍 Unified Filter Row */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.search-group {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #388E3C, #66BB6A);
+  transform: scale(1.05);
+}
+
+/* 🌿 Floating Label Dropdown */
+.floating-label {
+  position: relative;
+  max-width: 240px;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.floating-label label {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background: white;
+  padding: 0 6px;
+  font-size: 0.85rem;
+  color: #4CAF50;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown-select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+/* ⬇️ Custom Arrow */
+.floating-label::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #4CAF50;
+  pointer-events: none;
+  z-index: 2;
+}
+.dropdown-select:hover {
+  border-color: #81C784;
+}
+.dropdown-select:focus + label,
+.dropdown-select:not(:placeholder-shown) + label {
+  top: -14px;
+  font-size: 0.75rem;
+  color: #388e3c;
+}
+
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📦 Scheme Cards */
+.scheme-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.scheme-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.scheme-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.scheme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.scheme-card:hover .scheme-image {
+  transform: scale(1.1);
+}
+
+.scheme-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.scheme-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #388e3c;
+}
+
+.scheme-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 🔘 Learn More Button */
+.learn-more-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #1976d2;
+}
+
+/* 💾 Emoji Save Button */
+.emoji-save-btn {
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji-save-btn:hover {
+  transform: scale(1.2);
+}
+
+/* 😕 No Results */
+.no-results {
+  font-size: 1.1rem;
+  color: #757575;
+  margin-top: 2rem;
+}
+
+/* 🪟 Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.close-modal-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  background-color: #388e3c;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-group,
+  .floating-label {
+    width: 100%;
+  }
+}
+.category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.category-badge.infrastructure {
+  background-color: #4caf50; /* Green */
+}
+
+.category-badge.insurance {
+  background-color: #2196f3; /* Blue */
+}
+
+.category-badge.soil {
+  background-color: #9c27b0; /* Purple */
+}
+
+.category-badge.subsidy {
+  background-color: #f44336; /* Red */
+}
+
+.category-badge.organic{
+  background-color: #ff9800; /* Orange */
+}
+
+.category-badge.loan {
+  background-color: #3f51b5; /* Indigo */
+}
+.category-badge.training {
+  background-color: #795548; /* Earthy Brown */
+}
+
+.category-badge.finance {
+  background-color: #00bcd4; /* Bright Cyan */
+}
+
+
+

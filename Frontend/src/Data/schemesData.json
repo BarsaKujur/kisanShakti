@@ -1,0 +1,226 @@
+[
+  {
+    "name": "PM-KISAN",
+    "description": "₹6,000/year income support for small & marginal farmers.",
+    "category": "Subsidy",
+    "link": "https://www.pmkisan.gov.in/",
+    "emoji": "💰",
+    "image": "https://source.unsplash.com/featured/?farmer"
+  },
+  {
+    "name": "PMFBY",
+    "description": "Crop insurance against natural calamities.",
+    "category": "Insurance",
+    "link": "https://pmfby.gov.in/",
+    "emoji": "🌾",
+    "image": "https://source.unsplash.com/featured/?crop"
+  },
+  {
+    "name": "Kisan Credit Card (KCC)",
+    "description": "Low-interest loans for farming and allied activities.",
+    "category": "Loan",
+    "link": "https://vikaspedia.in/agriculture/policies-and-schemes/kisan-credit-card",
+    "emoji": "💳",
+    "image": "https://source.unsplash.com/featured/?loan"
+  },
+  {
+    "name": "Soil Health Card Scheme",
+    "description": "Personalized soil reports and fertilizer advice.",
+    "category": "Soil Health",
+    "link": "https://soilhealth.dac.gov.in/",
+    "emoji": "🧪",
+    "image": "https://source.unsplash.com/featured/?soil"
+  },
+  {
+    "name": "PMKSY",
+    "description": "Subsidies for micro-irrigation systems.",
+    "category": "Infrastructure",
+    "link": "https://pmksy.gov.in/",
+    "emoji": "🚿",
+    "image": "https://source.unsplash.com/featured/?irrigation"
+  },
+  {
+    "name": "e-NAM",
+    "description": "Online platform for better market access.",
+    "category": "Infrastructure",
+    "link": "https://enam.gov.in/",
+    "emoji": "🛒",
+    "image": "https://source.unsplash.com/featured/?market"
+  },
+  {
+    "name": "PM-KUSUM",
+    "description": "Solar pump subsidies for irrigation.",
+    "category": "Infrastructure",
+    "link": "https://mnre.gov.in/pm-kusum",
+    "emoji": "🔆",
+    "image": "https://source.unsplash.com/featured/?solar"
+  },
+  {
+    "name": "RKVY-RAFTAAR",
+    "description": "Grants for agri-startups and infrastructure.",
+    "category": "Loan",
+    "link": "https://rkvy.nic.in/",
+    "emoji": "🚀",
+    "image": "https://source.unsplash.com/featured/?startup"
+  },
+  {
+    "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+    "description": "Promotion of organic farming practices.",
+    "category": "Organic",
+    "link": "https://www.pkvymis.gov.in/",
+    "emoji": "🌿",
+    "image": "https://source.unsplash.com/featured/?organic"
+  },
+  {
+    "name": "National Beekeeping & Honey Mission",
+    "description": "Support for honey production and training.",
+    "category": "Training",
+    "link": "https://nbhm.gov.in/",
+    "emoji": "🐝",
+    "image": "https://source.unsplash.com/featured/?beekeeping"
+  },
+  {
+    "name": "National Bamboo Mission",
+    "description": "Promotion of bamboo cultivation and value addition.",
+    "category": "Organic",
+    "link": "https://nbm.nic.in/",
+    "emoji": "🎋",
+    "image": "https://source.unsplash.com/featured/?bamboo"
+  },
+  {
+    "name": "Krishi Udan Scheme",
+    "description": "Air transport support for perishable produce.",
+    "category": "Infrastructure",
+    "link": "https://www.civilaviation.gov.in/en/about-us/krishi-udan",
+    "emoji": "✈️",
+    "image": "https://source.unsplash.com/featured/?aircargo"
+  },
+  {
+    "name": "PM-KMY",
+    "description": "Pension scheme for small and marginal farmers.",
+    "category": "Subsidy",
+    "link": "https://www.pmkmy.gov.in/",
+    "emoji": "👵",
+    "image": "https://source.unsplash.com/featured/?pension"
+  },
+  {
+    "name": "Agri-Clinics & Agri-Business Centres",
+    "description": "Training and support for agri-entrepreneurs.",
+    "category": "Training",
+    "link": "https://agricoop.nic.in/en/agri-clinics-and-agri-business-centres",
+    "emoji": "🏫",
+    "image": "https://source.unsplash.com/featured/?training"
+  },
+  {
+    "name": "FPO Scheme (Farmer Producer Organizations)",
+    "description": "Support for collective farming and marketing.",
+    "category": "Loan",
+    "link": "https://sfacindia.com/FPO.aspx",
+    "emoji": "👥",
+    "image": "https://source.unsplash.com/featured/?fpo"
+  },
+  {
+    "name": "Agri Infrastructure Fund",
+    "description": "Medium-long term debt financing for agri projects.",
+    "category": "Loan",
+    "link": "https://agrinfra.dac.gov.in/",
+    "emoji": "🏗️",
+    "image": "https://source.unsplash.com/featured/?warehouse"
+  },
+  {
+    "name": "National Mission on Sustainable Agriculture (NMSA)",
+    "description": "Climate-resilient farming support.",
+    "category": "Organic",
+    "link": "https://nmsa.dac.gov.in/",
+    "emoji": "🌎",
+    "image": "https://source.unsplash.com/featured/?sustainable"
+  },
+  {
+    "name": "Farm Machinery Training & Testing Institutes",
+    "description": "Hands-on training for modern farm equipment.",
+    "category": "Training",
+    "link": "https://agrimachinery.nic.in/",
+    "emoji": "🛠️",
+    "image": "https://source.unsplash.com/featured/?machinery"
+  },
+  {
+    "name": "Sub-Mission on Agricultural Mechanization (SMAM)",
+    "description": "Subsidies for farm machinery like tractors, seed drills, and harvesters.",
+    "category": "Infrastructure",
+    "link": "https://agrimachinery.nic.in/",
+    "emoji": "🚜",
+    "image": "https://source.unsplash.com/featured/?tractor"
+  },
+  {
+    "name": "Rashtriya Gokul Mission (RGM)",
+    "description": "Improves indigenous cattle breeds and promotes dairy farming.",
+    "category": "Organic",
+    "link": "https://dahd.nic.in/schemes/rashtriya-gokul-mission",
+    "emoji": "🐄",
+    "image": "https://source.unsplash.com/featured/?cattle"
+  },
+  {
+    "name": "Dairy Entrepreneurship Development Scheme (DEDS)",
+    "description": "Financial assistance for dairy units, chilling units, and fodder cultivation.",
+    "category": "Loan",
+    "link": "https://nabard.org/",
+    "emoji": "🥛",
+    "image": "https://source.unsplash.com/featured/?dairy"
+  },
+  {
+    "name": "National Horticulture Mission (NHM)",
+    "description": "Supports fruit, vegetable, and spice cultivation with infrastructure and training.",
+    "category": "Organic",
+    "link": "https://nhm.nic.in/",
+    "emoji": "🍅",
+    "image": "https://source.unsplash.com/featured/?horticulture"
+  },
+  {
+    "name": "Seed Village Scheme",
+    "description": "Ensures quality seed production and distribution at village level.",
+    "category": "Organic",
+    "link": "https://seednet.gov.in/",
+    "emoji": "🌱",
+    "image": "https://source.unsplash.com/featured/?seeds"
+  },
+  {
+    "name": "Neem Coated Urea Scheme",
+    "description": "Improves nitrogen efficiency and reduces fertilizer misuse.",
+    "category": "Soil Health",
+    "link": "https://fert.nic.in/",
+    "emoji": "🧪",
+    "image": "https://source.unsplash.com/featured/?fertilizer"
+  },
+  {
+    "name": "Feed and Fodder Development Scheme",
+    "description": "Promotes fodder cultivation and storage for livestock.",
+    "category": "Infrastructure",
+    "link": "https://dahd.nic.in/",
+    "emoji": "🌾",
+    "image": "https://source.unsplash.com/featured/?fodder"
+  },
+  {
+    "name": "Organic Farming Incentive Scheme",
+    "description": "Financial incentives for certified organic farming.",
+    "category": "Organic",
+    "link": "https://ncof.dacnet.nic.in/",
+    "emoji": "🌿",
+    "image": "https://source.unsplash.com/featured/?organicfarm"
+  },
+  {
+    "name": "Farmer Development Certificate Scheme",
+    "description": "Skill development and certification for progressive farmers.",
+    "category": "Training",
+    "link": "https://agricoop.nic.in/",
+    "emoji": "📜",
+    "image": "https://source.unsplash.com/featured/?training"
+  },
+  {
+    "name": "Drones for Precision Farming",
+    "description": "Encourages use of drones for spraying, monitoring, and data collection.",
+    "category": "Infrastructure",
+    "link": "https://agrimachinery.nic.in/",
+    "emoji": "🛸",
+    "image": "https://source.unsplash.com/featured/?drone"
+  }
+]

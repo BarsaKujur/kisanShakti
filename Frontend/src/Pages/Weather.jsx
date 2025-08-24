@@ -217,7 +217,7 @@ const Weather = () => {
           </div>
 
           <div className="text-end mt-2 mt-md-0">
-            <h5>📍 Forecast for: <span className="text-primary">{location}</span></h5>
+            <h5>📍 Forecast for: <span className="location-text">{location}</span></h5>
           </div>
         </div>
 
@@ -241,4 +241,11 @@ const Weather = () => {
   );
 };
 
+///<<<<<<< HEAD
 export default Weather;
+///=======
+///export default Weather;
+
+
+
+///>>>>>>> cf1c3d6b0944b0faa314b91c1b059e724da2ab73

@@ -5,7 +5,8 @@ import CropAdvisorTabs from '../Components/CropAdvisorTabs';
 import CropRecommendationForm from '../Components/CropAdvisorFrom'
 import PestDetectionTool from '../Components/PestDetectionTool';
 import NutritionFertilizerAdvisor from '../Components/NutritionFertilizerAdvisor';
-
+import SchemeFinder from '../Components/SchemeFinder';
+import CropCalendar from '../Components/CropCalendar';
 
 const CropAdvisor = () => {
    const [activeTab, setActiveTab] = useState('recommendation');
@@ -21,7 +22,7 @@ const CropAdvisor = () => {
       case 'schemes':
         return <SchemeFinder />;
       case 'calendar':
-        return <CropCalendarAssistant />;
+        return <CropCalendar />;
       default:
         return null;
     }
