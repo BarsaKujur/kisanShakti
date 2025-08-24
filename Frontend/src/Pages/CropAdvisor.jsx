@@ -22,7 +22,7 @@ const CropAdvisor = () => {
       case 'schemes':
         return <SchemeFinder />;
       case 'calendar':
-        return <CropCalendarAssistant />;
+        return <CropCalendar />;
       default:
         return null;
     }
