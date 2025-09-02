@@ -49,8 +49,8 @@ const NavBar = () => {
             </Dropdown>
 
             {/* Auth Buttons */}
-            <Button as={Link} to="/login" variant="success" className="ms-3">Login</Button>
-            <Button as={Link} to="/signup" variant="success" className="ms-2">Sign Up</Button>
+            <Button as={Link} to="/login" variant="success" className="ms-3 gradient-btn">Login</Button>
+            <Button as={Link} to="/signup" variant="success" className="ms-2 gradient-btn">Sign Up</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
