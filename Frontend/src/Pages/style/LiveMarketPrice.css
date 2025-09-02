@@ -1,0 +1,82 @@
+/* 🌾 Background for the form section */
+.tab-cont{
+  /* background-image: url('');  */
+  
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* 🎨 Gradient button styling */
+.btn-success {
+   background: linear-gradient(to right, #56ab2f, #a8e063);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-success:hover {
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+/* 🧾 Forecast Summary Block */
+.bg-light {
+  background-color: #f9f9f9 !important;
+  border-left: 6px solid #28a745;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bg-light h4 {
+  color: #218838;
+  font-weight: 600;
+}
+
+.bg-light p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 💰 Weekly Price Table */
+.table-bordered {
+  border: 2px solid #dee2e6;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.table-bordered th {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+}
+
+.table-bordered td {
+  text-align: center;
+  font-weight: 500;
+  color: #444;
+}
+
+/* 📈 Forecast Trend Points */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #e9f5ec;
+  border-left: 4px solid #28a745;
+  margin-bottom: 8px;
+  padding: 10px;
+  font-weight: 500;
+  color: #2c3e50;
+  border-radius: 4px;
+}
