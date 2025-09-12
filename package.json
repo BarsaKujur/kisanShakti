@@ -16,7 +16,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
-    "start": "node App.jsx"
+    "start": "node App.jsx",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -24,5 +26,9 @@
     "react-dropzone": "^14.3.8",
     "react-icons": "^5.5.0",
     "recharts": "^3.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.4"
   }
 }

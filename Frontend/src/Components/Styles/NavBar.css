@@ -10,8 +10,7 @@
 #bg{
    /* background-color: #eef169;
         background-image: radial-gradient(circle, #9F7E4A, #eef169, #9F7E4A 600%); */ 
-     
-
+    
    /* background: linear-gradient(to right, #F3E9D2, #D6CDA4, #A3B18A); */
  /* background: linear-gradient(to right, #FFF8E1, #FDD9A0, #E6A57E); */
  background: linear-gradient(to right, #A7C957);
@@ -22,19 +21,37 @@
 /* background: linear-gradient(to right, #FDEBD0, #FAD6A5, #F5B895); */
 /* background: linear-gradient(to right, #FAF3DD, #F8CBA6, #E3A587); */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         padding: 48px 24px;
         color: #FFF;
+}
+.gradient-btn {
+  /* background: linear-gradient(to right, #00BCD4, #8BC34A); */
+   background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75); 
+  
+     border-radius: 50px;
+
+    
+ /* Dark green to amber gold */
+  color: white !important;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  
+}
+
+.gradient-btn:hover {
+  /* background: linear-gradient(135deg, #1B5E20, #FFD54F); 
+  transform: scale(1.03);  */
+  background-position: 100% 0;
+    
+  
+}
+.logo-img {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
 }

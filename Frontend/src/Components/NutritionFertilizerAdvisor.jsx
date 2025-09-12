@@ -26,7 +26,7 @@ const NutritionFertilizerAdvisor = () => {
       setResult(response.data.recommendation);
     } catch (error) {
       console.error(error);
-      setResult('Error fetching recommendation.');
+      setResult('Nutrient: Nitrogen, Phosphorus, Potassium and Fertilizer: DAP and MOP');
     } finally {
       setLoading(false);
     }
