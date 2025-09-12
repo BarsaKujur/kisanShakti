@@ -152,7 +152,42 @@ const LiveMarketPrice = () => {
         </div>
 
 
-        <button className="btn btn-success mt-4" onClick={handleSubmit}>Generate Forecast</button>
+        <button
+  className="btn btn-success mt-4"
+  onClick={() => {
+    if (!selectedState || !selectedDistrict || !selectedCrop || !selectedSeason) {
+      alert("Please select all fields before generating the forecast.");
+      return;
+    }
+
+    // For now, setting hardcoded demo forecast object
+    setForecast({
+      crop: "Barley",
+      region: "Rajasthan",
+      season: "Rabi",
+      msp: 1850,
+      market: `📊 Market Highlights:
+- Fatehnagar: ₹2183 per quintal — highest and stable price
+- Vijaynagar: ₹2050 to ₹2350 — wide range, strong demand
+- Bassi: ₹2040 to ₹2070 — consistent pricing
+- Dooni: ₹2050 to ₹2056 — narrow band, steady market
+- Suratgarh: ₹1880 to ₹1900 — slightly above MSP`,
+      trend_points: [
+        { Month: "Jan", Week: 1, Price: 2050 },
+        { Month: "Jan", Week: 2, Price: 2070 },
+        { Month: "Jan", Week: 3, Price: 2100 },
+        { Month: "Jan", Week: 4, Price: 2120 },
+      ],
+      price_table: {
+        Jan: [2050, 2070, 2100, 2120],
+        Feb: [2080, 2100, 2130, 2150],
+      }
+    });
+  }}
+  disabled={!selectedState || !selectedDistrict || !selectedCrop || !selectedSeason}
+>
+  {forecast ? "Regenerate Forecast" : "Generate Forecast"}
+</button>
 
         {forecast && (
           <div className="mt-5">
